@@ -48,7 +48,7 @@ func (app *application) run(mux http.Handler) error {
 		Handler: mux,
 		WriteTimeout: time.Second * 30, 
 		ReadTimeout: time.Second * 10,
-		IdleTimeout: time.Second,
+		IdleTimeout: time.Second * 60,
 	}
 
 	log.Printf("Server has started %s", app.config.addr)
